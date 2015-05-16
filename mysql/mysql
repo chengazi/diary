@@ -1,0 +1,6 @@
+#start mysql in ubuntu:
+privilage: root
+command: service mysql start/stop/restart
+
+#mysql log path
+path: /var/log/mysql/
