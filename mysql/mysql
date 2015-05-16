@@ -4,3 +4,15 @@ command: service mysql start/stop/restart
 
 #mysql log path
 path: /var/log/mysql/
+
+#mysql show database
+command: show databases;
+
+#mysql connect to DB
+command: mysql -u username -p
+
+#mysql describe table
+command: describe tablename;
+
+#mysql show all users and its privilage
+sql: select distinct concat("User:",user,"@",host,";") as query from mysql.user;
