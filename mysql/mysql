@@ -16,3 +16,18 @@ command: describe tablename;
 
 #mysql show all users and its privilage
 sql: select distinct concat("User:",user,"@",host,";") as query from mysql.user;
+
+#mysql create db schema.
+sql: create database dbname;
+
+#mysql create user and set default password.
+#notice: pay attention to the ' and @ sign.
+#notice: % means you can both connect from remote or from localhost.
+sql: create user 'user1'@'%' IDENTIFIED BY 'password1';
+
+#mysql grant privilage to user.
+sql: grant all privileges on dbname.* to user1;
+
+#mysql change password.
+sql:set password for 'user1'@'%' = PASSWORD('password2');
+
